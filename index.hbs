@@ -24,8 +24,41 @@ into the {body} of the default.hbs template --}}
   </section>
   
   <main>
+    <!-- part 1 mini blurb -->
+    <div class="l-content" data-aos="fade-down" data-aos-delay="1000">
+      <div class="pure-g l-wrapper">
+        <div class="pure-u-1-5" style="background-color:red"></div>
+        <div class="pure-u-3-5" style="background-color:green">
+          <h2>No nonsense UX Designer with over 5 years in the tech industry. Read <a href="/about">about me</a> or scroll for work, talks and thoughts.</h2>
+        </div>
+        <div class="pure-u-1-5" style="background-color:blue"></div>
+      </div>
+    </div>
+    <!-- part 2 work -->
+    <div class="l-content" data-aos="fade-right" data-aos-delay="300">
+      <div class="l-wrapper">
+        <h1>Work</h1>
+      </div>
+      <div class="pure-g">
+        <div class="pure-u-2-5" style="background-color:red"></div>
+        <div class="pure-u-3-5" style="background-color:green"><h2>Mini-blurb and link to About me.</h2></div>
+      </div>
+    </div>
+    <!-- part 3 talks -->
+    <div class="l-content" data-aos="fade-left" data-aos-delay="300">
+      <div class="l-wrapper">
+        <h1>Talks</h1>
+      </div>
+      <div class="pure-g">
+        <div class="pure-u-3-5" style="background-color:green"><h2>Mini-blurb and link to About me.</h2></div>
+        <div class="pure-u-2-5" style="background-color:red"></div>
+      </div>
+    </div>
+
+    <!-- part 4 thoughts (resume default posts) -->
     <div class="l-content">
       <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
+        <h1>Thoughts</h1>
         <div class="l-grid centered">
           {{#get "posts" filter="featured:true" include="authors,tags" limit="5" as |featured|}}
           {{#if featured}}
