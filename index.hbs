@@ -28,20 +28,41 @@ into the {body} of the default.hbs template --}}
     <div class="l-content" data-aos="fade-down" data-aos-delay="1000">
       <div class="pure-g l-wrapper">
         <div class="pure-u-1-5" style="background-color:red"></div>
-        <div class="pure-u-3-5" style="background-color:green">
-          <h2>No nonsense UX Designer with over 5 years in the tech industry. Read <a href="/about">about me</a> or scroll for work, talks and thoughts.</h2>
+        <div class="pure-u-3-5" style="background-color:green;text-align:center">
+          <h2>No nonsense UX Consultant & Designer with over 5 years in tech from startup to enterprise.</h2>
+          <span><a href="/about">Read more ></a></span>
         </div>
         <div class="pure-u-1-5" style="background-color:blue"></div>
       </div>
     </div>
     <!-- part 2 work -->
+    <style>
+      .cw-work-cover {
+        background: url("/assets/images/chuck-dp-doodle.jpg");
+        background-position: center;
+        height: 20em;
+      }
+      .cw-talk-cover {
+        background: url("/assets/images/chuck-dp-doodle.jpg");
+        background-position: center;
+        height: 20em;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
+      .debug {
+        background-color: rgba(30,150,10,0.5)
+      }
+    </style>
     <div class="l-content" data-aos="fade-right" data-aos-delay="300">
       <div class="l-wrapper">
         <h1>Work</h1>
       </div>
-      <div class="pure-g">
-        <div class="pure-u-2-5" style="background-color:red"></div>
-        <div class="pure-u-3-5" style="background-color:green"><h2>Mini-blurb and link to About me.</h2></div>
+      <div class="pure-g l-wrapper">
+        <div class="pure-u-2-5 cw-work-cover"></div>
+        <div class="pure-u-3-5 debug">
+          <h2>Mini-blurb and link to About me.</h2>
+          <a href="/work">Read more ></a>
+        </div>
       </div>
     </div>
     <!-- part 3 talks -->
@@ -49,9 +70,9 @@ into the {body} of the default.hbs template --}}
       <div class="l-wrapper">
         <h1>Talks</h1>
       </div>
-      <div class="pure-g">
-        <div class="pure-u-3-5" style="background-color:green"><h2>Mini-blurb and link to About me.</h2></div>
-        <div class="pure-u-2-5" style="background-color:red"></div>
+      <div class="pure-g l-wrapper">
+        <div class="pure-u-3-5 debug"><h2>Mini-blurb and link to About me.</h2></div>
+        <div class="pure-u-2-5 cw-talk-cover"></div>
       </div>
     </div>
 
