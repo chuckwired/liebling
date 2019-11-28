@@ -93,7 +93,15 @@ into the {body} of the default.hbs template --}}
     <!-- part 4 thoughts (resume default posts) -->
     <div class="l-content">
       <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
-        <h1>Thoughts</h1>
+        <style>
+          {{!-- fix title overlap when featured post exists on smaller screens --}}
+          @media (max-width: 992px){
+            .thoughts-title {
+              padding-bottom: 45px;
+            }
+          }
+        </style>
+        <h1 class="thoughts-title">Thoughts</h1>
         <div class="l-grid centered">
           {{#get "posts" filter="featured:true" include="authors,tags" limit="5" as |featured|}}
           {{#if featured}}
