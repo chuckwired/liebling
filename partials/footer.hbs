@@ -19,8 +19,7 @@ This footer template is shared across all the pages.
     <div class="pure-u-1 pure-u-md-1-3 l-content">
       <div class="pure-u-1 m-footer-social">
         {{!-- TODO: re-include once logo exists --}}
-        {{!-- {{#if @site.logo}} --}}
-        {{#if false}}
+        {{!-- {{#if @site.logo}}
         <a href="{{@site.url}}" class="m-logo in-mobile-topbar">
           <img src="{{@site.logo}}" alt="{{@site.title}}">
         </a>
@@ -28,7 +27,7 @@ This footer template is shared across all the pages.
           <a href="{{@site.url}}" class="m-site-name in-mobile-topbar">
             {{@site.title}}
           </a>
-        {{/if}}
+        {{/if}} --}}
       </div>
       <div class="pure-u-1 m-footer-social">
         {{#if @site.facebook}}
@@ -60,7 +59,7 @@ This footer template is shared across all the pages.
     <div class="pure-u-1 pure-u-md-1-3">
       <!-- copyrights -->
       <p class="m-footer-copyright">
-        <span>{{@site.title}} &copy; {{date format="YYYY"}}</span>
+        <a href="{{@site.url}}"><span>{{@site.title}} &copy; {{date format="YYYY"}}</span></a>
         <span>&nbsp; &bull; &nbsp;</span>
         <span>{{t "Published with"}} <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a></span>
       </p>
