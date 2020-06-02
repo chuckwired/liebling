@@ -24,7 +24,7 @@ into the {body} of the default.hbs template --}}
   </section>
 
   <style>
-    .cw-center{
+    .cw-center {
       text-align: center;
     }
   </style>
@@ -36,7 +36,7 @@ into the {body} of the default.hbs template --}}
         <div class="pure-u-1-5"></div>
         <div class="pure-u-3-5 cw-center">
           <h1>No nonsense UX Designer & Innovator with over 5 years in the tech industry, from startups to enterprise.</h1>
-          <span><a href="/author/chuck">Read more <i class="icon-chevron-right">›</i></a></span>
+          <h2 class="cw-download"><a href="https://drive.google.com/file/d/1m2Qofg2jYFuvIR1JLORs1YhLTqJvPRWl/view?usp=sharing" target="_blank">Download CV</a></h2>
         </div>
         <div class="pure-u-1-5"></div>
       </div>
@@ -66,25 +66,24 @@ into the {body} of the default.hbs template --}}
     </style>
     <div class="l-content" data-aos="fade-right" data-aos-delay="300">
       <div class="l-wrapper">
-        <h1>Work</h1>
+        <h1>Approach</h1>
       </div>
       <div class="pure-g l-wrapper">
         <div class="pure-u-2-5 cw-work-cover"></div>
         <div class="pure-u-3-5 m-article-card__info-link">
           <h2>A true full-stack maverick—discover, design and validate our thinking to enable real change.</h2>
-          <a href="/tag/work">Read more <i class="icon-chevron-right">›</i></a>
         </div>
       </div>
     </div>
     <!-- part 3 talks -->
     <div class="l-content" data-aos="fade-left" data-aos-delay="300">
       <div class="l-wrapper">
-        <h1>Talks</h1>
+        <h1>Community</h1>
       </div>
       <div class="pure-g l-wrapper">
         <div class="pure-u-3-5 m-article-card__info-link">
           <h2>I believe in sharing real, raw results to challenge our work and inspire others to do better.</h2>
-          <a href="/tag/talks">Read more <i class="icon-chevron-right">›</i></a>
+          <a href="/tag/community">Read more <i class="icon-chevron-right">›</i></a>
         </div>
         <div class="pure-u-2-5 cw-talk-cover"></div>
       </div>
@@ -101,7 +100,7 @@ into the {body} of the default.hbs template --}}
             }
           }
         </style>
-        <h1 class="thoughts-title">Thoughts</h1>
+        <h1 class="thoughts-title">Portfolio</h1>
         <div class="l-grid centered">
           {{#get "posts" filter="featured:true" include="authors,tags" limit="5" as |featured|}}
           {{#if featured}}
