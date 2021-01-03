@@ -35,7 +35,7 @@ into the {body} of the default.hbs template --}}
       <div class="pure-g l-wrapper">
         <div class="pure-u-1-5"></div>
         <div class="pure-u-3-5 cw-center">
-          <h1>No nonsense UX Designer & Innovator with over 5 years in the tech industry, from startups to enterprise.</h1>
+          <h1>No nonsense UX Designer & Innovator with over <span id="years-exp">200</span> years in the tech industry, from startups to enterprise.</h1>
           <h2 class="cw-download"><a href="https://drive.google.com/file/d/1RqqmxoxBucL_ENC1VvZirjl5LxsQgv83/view?usp=sharing" target="_blank">Download CV</a></h2>
         </div>
         <div class="pure-u-1-5"></div>
@@ -158,6 +158,14 @@ into the {body} of the default.hbs template --}}
     </div>
   </main>
 </div>
+
+{{!-- Years of experience updater, run after rendering the HTML --}}
+<script>
+    var today = new Date();
+    var currentYear = today.getFullYear();
+    var experience = (currentYear - 2014);
+    document.getElementById("years-exp").innerText = experience;
+  </script>
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}

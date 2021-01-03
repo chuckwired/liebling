@@ -9,7 +9,7 @@
     "dev": "NODE_ENV=development node node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "NODE_ENV=development node node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "docker-watch": "docker-compose up -d && node node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "docker-watch": "node node_modules/concurrently/bin/concurrently.js --names 'DOCKER,BROWSERSYNC' --prefix-colors 'yellow,magenta' --kill-others 'docker-compose up' 'npm run watch'",
     "production": "NODE_ENV=production node node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && npm run zip",
     "zip": "run-script-os",
     "zip:win32": "cd .. && 7z a -r -x!.git -x!src chuckwired.zip *",
@@ -22,6 +22,7 @@
     "7zip": "0.0.6",
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "^2.0.1",
+    "concurrently": "^5.3.0",
     "ghost-cli": "^1.11.0",
     "laravel-mix": "^4.0.0-beta.2",
     "resolve-url-loader": "3.1.0",
@@ -41,7 +42,8 @@
     "medium-zoom": "^1.0.3",
     "slick-carousel": "^1.8.1",
     "stickybits": "^3.6.1",
-    "tippy.js": "^4.0.1"
+    "tippy.js": "^4.0.1",
+    "win-node-env": "^0.4.0"
   },
   "optionalDependencies": {
     "win-node-env": "^0.4.0"
