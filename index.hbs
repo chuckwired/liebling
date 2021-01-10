@@ -161,11 +161,15 @@ into the {body} of the default.hbs template --}}
 
 {{!-- Years of experience updater, run after rendering the HTML --}}
 <script>
-    var today = new Date();
-    var currentYear = today.getFullYear();
-    var experience = (currentYear - 2014);
-    document.getElementById("years-exp").innerText = experience;
-  </script>
+  let yearsOfExperience = (startDate) => {
+    let today = new Date();
+    let years = today.getFullYear() - startDate.getFullYear();
+    let isMonthOrLater = today.getMonth() >= startDate.getMonth();
+    return (isMonthOrLater ? years : years - 1);
+  }
+  let start = new Date('2014-09-01')
+  document.getElementById("years-exp").innerText = yearsOfExperience(start); //experience;
+</script>
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
