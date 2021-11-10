@@ -22,12 +22,6 @@ into the {body} of the default.hbs template --}}
     {{/if}}
   </div>
   </section>
-
-  <style>
-    .cw-center {
-      text-align: center;
-    }
-  </style>
   
   <main>
     <!-- part 1 mini blurb -->
@@ -35,61 +29,54 @@ into the {body} of the default.hbs template --}}
       <div class="pure-g l-wrapper">
         <div class="pure-u-1-5"></div>
         <div class="pure-u-3-5 cw-center">
-          <h1>No nonsense UX Designer & Innovator with over <span id="years-exp">200</span> years in the tech industry, from startups to enterprise.</h1>
-          <h2 class="cw-download"><a href="https://drive.google.com/file/d/1RqqmxoxBucL_ENC1VvZirjl5LxsQgv83/view?usp=sharing" target="_blank">Download CV</a></h2>
+          <h1>End-to-end Design System expert with over <span id="years-exp">200</span> years in the tech industry, from startups to enterprise.</h1>
+          <h2><a href="https://drive.google.com/file/d/1RqqmxoxBucL_ENC1VvZirjl5LxsQgv83/view?usp=sharing" target="_blank">Download CV</a></h2>
         </div>
         <div class="pure-u-1-5"></div>
       </div>
     </div>
-    <!-- part 2 work -->
-    <style>
-      .cw-work-cover {
-        background: url("/assets/images/work-dp.png");
-        background-position: right;
-        background-size: cover;
-        height: 20em;
-      }
-      .cw-talk-cover {
-        background: url("/assets/images/talks-dp.jpg");
-        background-position: center;
-        background-size: cover;
-        height: 20em;
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
-      }
-      .debug {
-        background-color: rgba(30,150,10,0.5)
-      }
-      .icon-chevron-right{
-        font-size: 1.4em;
-      }
-    </style>
+
+    <!-- part 2 Figma skills -->
     <div class="l-content" data-aos="fade-right" data-aos-delay="300">
       <div class="l-wrapper">
-        <h1>Approach</h1>
+        <h1>Figma Prototyping</h1>
       </div>
       <div class="pure-g l-wrapper">
-        <div class="pure-u-2-5 cw-work-cover"></div>
+        <div class="pure-u-2-5 cw-figma-cover"></div>
         <div class="pure-u-3-5 m-article-card__info-link">
-          <h2>A true full-stack maverick—discover, design and validate our thinking to enable real change.</h2>
+          <h2>Published author in <a href="https://uxdesign.cc">UX Collective</a> for advanced prototyping techniques.</h2>
+          <a class="cw-underline" href="/figma-techniques">See my Figma blogs <i class="icon-chevron-right">›</i></a>
         </div>
       </div>
     </div>
-    <!-- part 3 talks -->
+    <!-- part 3 Coding skills -->
     <div class="l-content" data-aos="fade-left" data-aos-delay="300">
       <div class="l-wrapper">
-        <h1>Community</h1>
+        <h1>Coding</h1>
       </div>
       <div class="pure-g l-wrapper">
         <div class="pure-u-3-5 m-article-card__info-link">
-          <h2>I believe in sharing real, raw results to challenge our work and inspire others to do better.</h2>
-          <a href="/tag/community">Read more <i class="icon-chevron-right">›</i></a>
+          <h2>A background in DevOps means the tools, systems, and processes I put in place are scalable, robust, and maintainable.</h2>
+          <a class="cw-underline" href="/tag/coding">See my Code blogs <i class="icon-chevron-right">›</i></a>
         </div>
-        <div class="pure-u-2-5 cw-talk-cover"></div>
+        <div class="pure-u-2-5 cw-code-cover"></div>
       </div>
     </div>
 
-    <!-- part 4 thoughts (resume default posts) -->
+    <!-- part 4 Mentoring skills -->
+    <div class="l-content" data-aos="fade-right" data-aos-delay="300">
+      <div class="l-wrapper">
+        <h1>Education and Documentation</h1>
+      </div>
+      <div class="pure-g l-wrapper">
+        <div class="pure-u-2-5 cw-talk-cover"></div>
+        <div class="pure-u-3-5 m-article-card__info-link">
+          <h2>Using my <a href="/design-sprint">certified facilitation skills</a> and <a href="https://events.leaddev.com/together" target="_blank">Lead Dev</a> training, I can mentor your team to adopt Design System best practices.</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- part 5 Case studies (resume default posts) -->
     <div class="l-content">
       <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
         <style>
@@ -100,7 +87,7 @@ into the {body} of the default.hbs template --}}
             }
           }
         </style>
-        <h1 class="thoughts-title">Portfolio</h1>
+        <h1 class="thoughts-title">Case studies</h1>
         <div class="l-grid centered">
           {{#get "posts" filter="featured:true" include="authors,tags" limit="5" as |featured|}}
           {{#if featured}}

@@ -1,0 +1,49 @@
+// Ensure header hyperlinks are visible
+h2 a {
+  text-decoration: underline;
+  color: var(--link-color);
+}
+
+.cw-center {
+  text-align: center;
+}
+
+.cw-work-cover {
+  background: url("/assets/images/work-dp.png");
+  background-position: right;
+  background-size: cover;
+  height: 20em;
+}
+.cw-figma-cover {
+  
+  background: url("/assets/images/page-layout-gif.gif");
+  background-position: left;
+  background-size: cover;
+  height: 20em;
+}
+.cw-talk-cover {
+  background: url("/assets/images/talks-dp.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 20em;
+  // -webkit-transform: scaleX(-1);
+  // transform: scaleX(-1);
+}
+.cw-code-cover {
+  background: url("/assets/images/code-screenshot.png");
+  background-position: left;
+  background-size: cover;
+  height: 20em;
+}
+.debug {
+  background-color: rgba(30,150,10,0.5)
+}
+.icon-chevron-right{
+  font-size: 1.5em;
+}
+
+.cw-underline {
+  border-bottom: 0.05rem solid;
+  color: inherit;
+  padding-bottom: 0.05rem;
+}
