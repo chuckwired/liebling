@@ -1,5 +1,5 @@
 // Ensure header hyperlinks are visible
-h2 a {
+h2 a, h3 a {
   color: var(--primary-subtle-color);
   
   &:hover {

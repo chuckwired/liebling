@@ -31,6 +31,7 @@ into the {body} of the default.hbs template --}}
         <div class="pure-u-3-5 cw-center">
           <h1>End-to-end UX designer with over <span id="years-exp">200</span> years in the tech industry, from startups to enterprise.</h1>
           <h2><a href="https://drive.google.com/file/d/1RqqmxoxBucL_ENC1VvZirjl5LxsQgv83/view?usp=sharing" target="_blank">View CV</a></h2>
+          <h3><a href="#portfolio">Skip to Portfolio</a></h3>
         </div>
         <div class="pure-u-1-5"></div>
       </div>
@@ -88,7 +89,7 @@ into the {body} of the default.hbs template --}}
             }
           }
         </style>
-        <h1 class="thoughts-title">Portfolio</h1>
+        <h1 class="thoughts-title"><a id="portfolio"></a>Portfolio</h1>
         <div class="l-grid centered">
           {{#get "posts" filter="featured:true" include="authors,tags" limit="3" as |featured|}}
           {{#if featured}}
