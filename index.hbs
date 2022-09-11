@@ -29,8 +29,8 @@ into the {body} of the default.hbs template --}}
       <div class="pure-g l-wrapper">
         <div class="pure-u-1-5"></div>
         <div class="pure-u-3-5 cw-center">
-          <h1>End-to-end Design System expert with over <span id="years-exp">200</span> years in the tech industry, from startups to enterprise.</h1>
-          <h2><a href="https://drive.google.com/file/d/1RqqmxoxBucL_ENC1VvZirjl5LxsQgv83/view?usp=sharing" target="_blank">Download CV</a></h2>
+          <h1>End-to-end UX designer with over <span id="years-exp">200</span> years in the tech industry, from startups to enterprise.</h1>
+          <h2><a href="https://drive.google.com/file/d/1RqqmxoxBucL_ENC1VvZirjl5LxsQgv83/view?usp=sharing" target="_blank">View CV</a></h2>
         </div>
         <div class="pure-u-1-5"></div>
       </div>
@@ -77,7 +77,7 @@ into the {body} of the default.hbs template --}}
       </div>
     </div>
 
-    <!-- part 5 Case studies (resume default posts) -->
+    <!-- part 5 Portfolio (resume default posts) -->
     <div class="l-content">
       <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
         <style>
@@ -88,9 +88,9 @@ into the {body} of the default.hbs template --}}
             }
           }
         </style>
-        <h1 class="thoughts-title">Case studies</h1>
+        <h1 class="thoughts-title">Portfolio</h1>
         <div class="l-grid centered">
-          {{#get "posts" filter="featured:true" include="authors,tags" limit="5" as |featured|}}
+          {{#get "posts" filter="featured:true" include="authors,tags" limit="3" as |featured|}}
           {{#if featured}}
           <div class="m-featured-slider">
             <div class="m-featured-slider__list js-featured-articles">
@@ -142,7 +142,12 @@ into the {body} of the default.hbs template --}}
         </div>
       </div>
       {{!-- Links to Previous/Next posts --}}
-      {{pagination}}
+      {{!-- {{pagination}} --}}
+
+      {{!-- Uncomment if/when I add more pieces --}}
+      {{!-- <div class="l-wrapper m-pagination">
+        <a class="cw-underline" style="align: center;" href="/tag/case-studies">View all portfolio pieces <i class="icon-chevron-right">›</i></a>
+      </div> --}}
     </div>
   </main>
 </div>

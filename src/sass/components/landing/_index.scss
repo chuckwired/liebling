@@ -1,7 +1,10 @@
 // Ensure header hyperlinks are visible
 h2 a {
-  text-decoration: underline;
-  color: var(--link-color);
+  color: var(--primary-subtle-color);
+  
+  &:hover {
+    border-bottom: 0.1rem solid;
+  }
 }
 
 .cw-center {
@@ -43,7 +46,10 @@ h2 a {
 }
 
 .cw-underline {
-  border-bottom: 0.05rem solid;
-  color: inherit;
+  color: var(--primary-subtle-color);
   padding-bottom: 0.05rem;
+  
+  &:hover {
+    border-bottom: 0.075rem solid;
+  }
 }
