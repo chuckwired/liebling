@@ -10,7 +10,7 @@
     "watch": "NODE_ENV=development node node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
     "docker-watch": "node node_modules/concurrently/bin/concurrently.js --names 'DOCKER,WEBPACK' --prefix-colors 'yellow,magenta' --kill-others 'docker-compose up' 'npm run watch'",
-    "production": "NODE_ENV=production node node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && npm run zip",
+    "production": "NODE_ENV=production node node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && npm run zip:default",
     "zip": "run-script-os",
     "zip:win32": "cd .. && 7z a -r -x!.git -x!src chuckwired.zip *",
     "zip:default": "cd .. && zip -r chuckwired.zip ./* -x './src/*'"
