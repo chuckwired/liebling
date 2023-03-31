@@ -5,29 +5,52 @@ This footer template is shared across all the pages.
 <footer class="m-footer">
   <style>
     .footer {
-      text-align: center;
       color: #fff;
       padding-bottom: 60px; {{!-- copy l-content spacing but for bottom --}}
     }
   </style>
-  <div class="pure-g footer">
-    <!-- layer 1 footer -->
+  <div class="pure-g footer align-center">
+    <!-- start site logo -->
+    <div class="pure-u-1 l-content">
+      {{#if @site.logo}}
+      <a href="{{@site.url}}" class="m-logo in-mobile-topbar">
+        <img src="{{@site.logo}}" alt="{{@site.title}}">
+      </a>
+      {{else}}
+        <a href="{{@site.url}}" class="m-site-name in-mobile-topbar">
+          {{@site.title}}
+        </a>
+      {{/if}}
+    </div>
+    <!-- end site logo -->
+    <!-- start nav layer -->
+    <div class="pure-u-1 pure-u-md-8-24 "></div>
+    <div class="pure-u-1 pure-u-md-3-24 align-left my-1 footer-links" style="display:flex;flex-direction:column;justify-content:flex-start;gap:10px;padding-left:20px;">
+      <span class="bold" style="margin-bottom:10px">Career</span>
+      <p><a href="/#portfolio/">💼 Portfolio</a></p>
+      <p><a href="https://chk.fyi/cv" target="_blank">📄 CV</a></p>
+    </div>
+    <div class="pure-u-1 pure-u-md-4-24 align-left my-1 footer-links" style="display:flex;flex-direction:column;justify-content:flex-start;gap:10px;padding-left:20px;">
+      <span class="bold" style="margin-bottom:10px">Courses</span>
+      <p><a href="https://chk.fyi/nobull" target="_blank">⚡️ Learn Figma fast</a></p>
+      <p><a href="https://chk.fyi/youtube" target="_blank">🔴 YouTube</a></p>
+    </div>
+    <div class="pure-u-1 pure-u-md-3-24 align-left my-1 footer-links" style="display:flex;flex-direction:column;justify-content:flex-start;gap:10px;padding-left:20px;">
+      <span class="bold" style="margin-bottom:10px">Content</span>
+      <p><a href="https://chk.fyi/ltX0xz" target="_blank">✍️ Medium</a></p>
+      <p><a href="/diary-of-design-thinking/">🎙️ Podcast</a></p>
+    </div>
+    <div class="pure-u-1 pure-u-md-6-24"></div>
+    <!-- end links layer -->
+    <!-- start connect layer -->
+    {{!-- <p>chuck@chuckwired.com</p> --}}
+    <!-- end connect layer -->
+    <!-- start logo layer -->
     <!-- 1/3 spacer -->
     <div class="pure-u-1 pure-u-md-1-3 l-content">
     </div>
     <!-- just logo -->
     <div class="pure-u-1 pure-u-md-1-3 l-content">
-      <div class="pure-u-1 m-footer-social">
-        {{#if @site.logo}}
-        <a href="{{@site.url}}" class="m-logo in-mobile-topbar">
-          <img src="{{@site.logo}}" alt="{{@site.title}}">
-        </a>
-        {{else}}
-          <a href="{{@site.url}}" class="m-site-name in-mobile-topbar">
-            {{@site.title}}
-          </a>
-        {{/if}}
-      </div>
       <div class="pure-u-1 m-footer-social">
         {{#if @site.facebook}}
         <a href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener" aria-label="Facebook">

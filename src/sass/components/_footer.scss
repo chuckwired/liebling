@@ -65,3 +65,9 @@
     direction: ltr;
   }
 }
+
+.footer-links {
+  @include respond-to('medium') {
+    padding-left: 20px;
+  }
+}
